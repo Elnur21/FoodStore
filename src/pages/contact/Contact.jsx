@@ -8,7 +8,7 @@ import swal from 'sweetalert';
 import "../../assets/style/googleMap.css"
 export default function Contact() {
     const [characterLength, setCharacterLength] = useState("");
-    const [emailRequired, setEmailRequired] = useState(true);
+    const [emailRequired, ] = useState(true);
     const sweetAlert = (e) => {
         swal({
             title: "Good job!",
@@ -23,7 +23,7 @@ export default function Contact() {
             <div className='d-flex justify-content-center'>
                 <div className='w-75 row'>
                     <div className='col-lg-6 border border-secondary d-flex justify-content-center p-5'>
-                        <form className='w-100 px-4' onSubmit={sweetAlert}>
+                        <form className='w-100 px-4' title='iframe' onSubmit={sweetAlert}>
                             <h5 className='text-center mb-4'>Send Us A Message</h5>
                             <div className='d-flex'>
                                 <button className='btn shadow-none border-secondary rounded-0 rounded-start border-end-0 p-3 pe-1'><FontAwesomeIcon icon={faEnvelope} /></button><input type="email" className='rounded-0 rounded-end p-3 ps-1 btn shadow-none text-start border-secondary border-start-0 w-100' placeholder='Your Email Adress' required={emailRequired} />
